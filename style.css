@@ -1,0 +1,139 @@
+.box{
+    border-radius: 6px;
+    height: 40px;
+    width: 80px;
+    margin: 50px auto;
+    
+}
+
+.box-uno{
+    background-color: aqua;
+}
+
+.box-dos{
+    background-color: brown;
+
+    /* transicion- se usan dos propiedades o dos valores si o si 
+    transition-property
+    transition-duration */
+    /* transition-property: all ;
+    transition-duration:  4s; */
+    transition: all 4s;
+}
+
+/* en general las transformaciones y las transiciones se combinan con pseudoclases - hover */
+
+.box:hover{
+    transform: scale(4)
+}
+
+.container-circle div{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.circle1{
+    background-color: aqua;
+    /* curva de velocidad */
+    transition: all 1.5s linear;
+}
+
+.circle2{
+    background-color: blue;
+    transition: all 1.5s ease;
+}
+
+.circle3{
+    background-color: brown;
+    transition: all 1.5s ease-in;
+}
+
+.circle4{
+    background-color: chartreuse;
+    transition: all 1.5s ease-in-out;
+}
+
+.circle5{
+    background-color: coral;
+    transition: all 1.5s ease-out;
+}
+
+.container-circle:hover div{
+    transform: translateX(300px);
+}
+
+.square1, .square2{
+    border-radius: 4px;
+    height: 150px;  
+    width: 150px;
+    margin: 100px;
+    /* en un futuro voy a utilizar las coordenadas en el transform */
+    position: absolute;
+}
+
+.square1{
+    background-color: aqua;
+}
+
+.square2{
+    background-color: brown;
+    transition: all 0.8s;
+}
+
+.square2:hover {
+    transform: translate(20px, 20px);
+}
+
+.combinado{
+    background-color: violet;
+    height: 75px;
+    width: 75px;
+    margin: 50px auto;
+    transition: all 2s;
+}
+
+.combinado:hover {
+    transform: rotate(90deg) scale(2);
+    transition: all 2s;
+}
+
+.animaciones{
+    width: 120px;
+    height: 120px;
+    margin: 50px auto;
+    background-color: yellow;
+}
+
+/* 1 - nombre de la animacion
+2- fotograma de la animacion */
+
+.animaciones:hover {
+    /* nombre+duracion */
+    animation: change-color 4s;
+
+}
+
+/* @ */
+@keyframes change-color {
+    0% {
+        background-color: blue;
+    }
+
+    15% {
+        border-radius: 50px;
+    }
+
+    40% {
+        background-color: aqua;
+    }
+
+    70% {
+        width: 500px;
+    }
+}
+
+
+
+
